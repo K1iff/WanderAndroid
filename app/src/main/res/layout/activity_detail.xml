@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.github.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp">
+
+        <ImageView
+            android:id="@+id/detailImageView"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="@color/dark_gray"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/backFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_back"
+            app:backgroundTint="#80000000"
+            app:fabSize="mini"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/detailTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Fort Santiago"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/detailImageView" />
+
+        <TextView
+            android:id="@+id/detailLocationTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="4dp"
+            android:text="Intramuros, Manila"
+            android:textColor="@color/wander_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/detailTitleTextView" />
+
+        <TextView
+            android:id="@+id/detailHoursTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="8dp"
+            android:text="Open Monday to Sunday 8:00 AM to 11:00 PM"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/detailLocationTextView" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/categoryChipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/detailHoursTextView">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Culture and Heritage"
+                app:chipBackgroundColor="@color/light_gray"
+                app:chipStrokeWidth="0dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/detailDescriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="6dp"
+            android:text="A historical citadel built by the Spanish in the late 1500s."
+            android:textColor="#555555"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/categoryChipGroup" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Save to Itinerary"
+            android:textSize="18sp"
+            app:backgroundTint="@color/wander_orange"
+            app:cornerRadius="8dp"
+            app:layout_constraintTop_toBottomOf="@id/detailDescriptionTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
