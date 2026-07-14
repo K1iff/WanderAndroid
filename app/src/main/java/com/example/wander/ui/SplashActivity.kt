@@ -22,7 +22,6 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Set up the two color text for the Splash Screen title
         val titleText = "Wander"
         val spannableString = SpannableString(titleText)
 
@@ -34,18 +33,15 @@ class SplashActivity : AppCompatActivity() {
 
         binding.appNameTextView.text = spannableString
 
-        // Load and start the animation
         val fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         binding.logoImageView.startAnimation(fadeIn)
         binding.appNameTextView.startAnimation(fadeIn)
         binding.taglineTextView.startAnimation(fadeIn)
 
-        // Wait for 3 seconds, then transition to the Login Screen
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
 
-            // Apply a smooth crossfade transition built into Android
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
             finish()

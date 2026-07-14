@@ -17,10 +17,8 @@ class SettingsActivity : AppCompatActivity() {
         binding = ActivitySettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Highlight the Settings icon in the bottom navigation
         binding.bottomNavigation.selectedItemId = R.id.nav_settings
 
-        // Handle bottom navigation clicks
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
@@ -38,20 +36,18 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-        // Handle interactive elements
         binding.notificationsSwitch.setOnCheckedChangeListener { _, isChecked ->
             val status = if (isChecked) "enabled" else "disabled"
             Toast.makeText(this, "Notifications $status", Toast.LENGTH_SHORT).show()
         }
 
         binding.darkModeSwitch.setOnCheckedChangeListener { _, isChecked ->
-            // This is a placeholder for actual dark mode logic
             val status = if (isChecked) "enabled" else "disabled"
             Toast.makeText(this, "Dark mode $status", Toast.LENGTH_SHORT).show()
         }
 
         binding.editProfileText.setOnClickListener {
-            Toast.makeText(this, "Edit Profile clicked", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, EditProfileActivity::class.java))
         }
 
         binding.helpCenterText.setOnClickListener {
@@ -60,11 +56,18 @@ class SettingsActivity : AppCompatActivity() {
 
         // Handle Logout
         binding.logoutButton.setOnClickListener {
+            getSharedPreferences("WanderPrefs", MODE_PRIVATE).edit().clear().apply()
+
             val intent = Intent(this, LoginActivity::class.java)
-            // Clear the backstack so the user cannot press back to return to the app
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()
         }
+    }
+    override fun onResume() {
+        super.onResume()
+        val sharedPrefs = getSharedPreferences("WanderPrefs", MODE_PRIVATE)
+        binding.profileName.text = sharedPrefs.getString("USER_NAME", "Wander Explorer")
+        binding.profileEmail.text = sharedPrefs.getString("USER_EMAIL", "explorer@wanderapp.com")
     }
 }

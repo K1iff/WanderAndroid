@@ -63,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:hint="Birthdate (YYYY MM DD)"
+                android:hint="Birthdate (YYYY-MM-DD)"
                 app:boxStrokeColor="@android:color/white"
                 app:boxStrokeWidth="2dp"
                 app:hintTextColor="@android:color/white"
@@ -71,7 +71,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="date"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:clickable="true"
                     android:textColor="@android:color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
