@@ -1,28 +1,9 @@
-# WanderAndroid 🏞️
+# Wander - Android 🏞️
 
-## Badges 🌟
+Wander is a mobile travel application designed to help users explore premier destinations across the Philippines. It allows users to discover new places, save them to their itinerary, and manage their travel plans.
 
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.20-blue.svg)](https://kotlinlang.org/)
 [![Android](https://img.shields.io/badge/Android-4.0+-green.svg)](https://developer.android.com/about/versions)
-
-## Description 📝
-
-WanderAndroid is a mobile travel application designed to help users explore premier destinations across the Philippines. It allows users to discover new places, save them to their itinerary, and manage their travel plans.
-
-## Table of Contents 📜
-
-- [Project Title & Badges](#wanderandroid-️)
-- [Description](#description-📝)
-- [Table of Contents](#table-of-contents-📜)
-- [Features](#features-✨)
-- [Tech Stack](#tech-stack-💻)
-- [Installation](#installation-🚀)
-- [Usage](#usage-🗺️)
-- [Project Structure](#project-structure-📁)
-- [Contributing](#contributing-🤝)
-- [License](#license-⚖️)
-- [Important links](#important-links-🔗)
-- [Footer](#footer-✨)
 
 ## Features ✨
 
@@ -128,25 +109,17 @@ We welcome contributions to improve WanderAndroid! If you'd like to contribute, 
 
 Please ensure your code follows the project's coding standards and includes relevant tests.
 
-## License ⚖️
-
-This project does not currently have a specified license. Please refer to the GitHub repository for more details.
-
 ## Important links 🔗
 
 - **Repository:** [https://github.com/K1iff/WanderAndroid](https://github.com/K1iff/WanderAndroid)
 
-## Footer ✨
+---
 
-**WanderAndroid** is a travel application developed for exploring the Philippines.
-
-- **Repository:** [K1iff/WanderAndroid](https://github.com/K1iff/WanderAndroid)
-- **Author:** K1iff
-- **Contact:** [kiff@example.com](mailto:kiff@example.com)
-
---- 
-
-⭐ Like this project? Give it a star! 
+> Built with ❤️ by K1iff
+> 
+> ⭐ [Star this repo](https://github.com/K1iff/WanderiOS)
+> 👍 [Like this project](https://github.com/K1iff/WanderiOS)
+> 🐛 [Report an issue](https://github.com/K1iff/WanderiOS/issues)
 
 
 
